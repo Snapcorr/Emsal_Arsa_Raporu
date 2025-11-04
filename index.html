@@ -299,6 +299,53 @@
     .btn.toggle-btn:hover {
         background-color: #475569;
     }
+    
+    .btn.gemini-btn {
+        background-color: #1e3a8a;
+        color: #dbeafe;
+        margin-left: 15px;
+        float: right;
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+    .btn.gemini-btn:hover {
+        background-color: #1e40af;
+    }
+    
+    .gemini-summary {
+        display: none;
+        background: #0f172a;
+        border: 1px solid #1e3a8a;
+        border-radius: 14px;
+        padding: 20px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        color: #e6edf3;
+        line-height: 1.6;
+    }
+    .gemini-summary .k {
+        font-size: 16px;
+        font-weight: 700;
+        color: #94a3b8;
+        margin-bottom: 10px;
+    }
+    .gemini-summary .v {
+        font-size: 15px;
+    }
+    
+    .gemini-summary .v p {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .gemini-summary .v p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .loading-text {
+        color: #94a3b8;
+        font-style: italic;
+    }
 
     @media print {
         body {
@@ -337,7 +384,7 @@
             color: #000;
         }
         
-        #non-relevant-container {
+        #non-relevant-container, .gemini-btn, .gemini-summary {
             display: none;
         }
     }
@@ -347,21 +394,21 @@
 
 <body>
   <div class="container">
+    <a href="#" id="gemini-summarize" class="btn gemini-btn">✨ Raporu Özetle</a>
     <div class="h1">Emsal Arsa Karşılaştırma Raporu</div>
     <div class="sub">6 Adet İlgili Emsal (Toroslar / Akdeniz)</div>
+    
+    <!-- Gemini Summary Box -->
+    <div id="gemini-summary-container" class="gemini-summary">
+      <div class="k">✨ Gemini API Analizi</div>
+      <div class="v" id="gemini-output">
+        <span class="loading-text">Analiz oluşturmak için butona tıklayın...</span>
+      </div>
+    </div>
+    
     <div class="grid">
       
-      <a href="#detail-1" class="card-link">
-        <div class="card">
-          <div class="img" style="background-image:url(images/KALE-DEN-CAMİLİ-DE-2-KAT-KONUT-İMARLI-450m2-ARSA-Satılık-Arsa-İlanları-sahibinden-com-da-1200202872-11-04-2025_11_52_AM.png)"></div>
-          <div class="title">KALE'DEN CAMİLİ'DE KONUT İMARLI 450m2 ARSA</div>
-          <div class="badges">
-            <div class="badge gray">Mersin / Akdeniz / Camili</div>
-            <div class="badge blue">Konut İmarlı</div>
-          </div>
-          <div class="row">
-            <div class="kv">
-              <div class="k">Fiyat</div>
+      <a href="#detail-1" class="card-link" data-card-id="1">
               <div class="v">3.600.000 TL</div>
             </div>
             <div class="kv">
@@ -376,7 +423,7 @@
         </div>
       </a>
       
-      <a href="#detail-2" class="card-link">
+      <a href="#detail-2" class="card-link" data-card-id="2">
         <div class="card">
           <div class="img" style="background-image:url(images/TEKİNLER-EMLAK-TAN-KURDALİ-MAH-SATILIK-KONUT-İMARLI-ARSA-Satılık-Arsa-İlanları-sahibinden-com-da-1273025677-11-04-2025_11_53_AM.png)"></div>
           <div class="title">TEKİNLER EMLAK'TAN KURDALİ MAH SATILIK KONUT İMARLI ARSA</div>
@@ -401,7 +448,7 @@
         </div>
       </a>
 
-      <a href="#detail-3" class="card-link">
+      <a href="#detail-3" class="card-link" data-card-id="3">
         <div class="card">
           <div class="img" style="background-image:url(images/YUSUF-KILIÇTA-377M2-1-50EMSAL-ZEMİN-3-KAT-ARSA-Satılık-Arsa-İlanları-sahibinden-com-da-1258635475-11-04-2025_11_54_AM.png)"></div>
           <div class="title">YUSUF KILIÇTA 377M2 1.50EMSAL ARSA</div>
@@ -426,7 +473,7 @@
         </div>
       </a>
       
-      <a href="#detail-4" class="card-link">
+      <a href="#detail-4" class="card-link" data-card-id="4">
         <div class="card">
           <div class="img" style="background-image:url(images/Ars-Yapi-Gayrimenkul-Mersin-Toroslar-Alsancak-Mahallesi-Satılık-Bağ-Bahçe-2-600-000-TL-17890693-11-04-2025_11_55_AM.png)"></div>
           <div class="title">Mersin Alsancak Mahallesi'nde Satılık 240 Metrekare Arsa</div>
@@ -451,7 +498,7 @@
         </div>
       </a>
       
-      <a href="#detail-5" class="card-link">
+      <a href="#detail-5" class="card-link" data-card-id="5">
         <div class="card">
           <div class="img" style="background-image:url(images/Dumanoğlu-Emlak-İnşaat-Otomoti̇v-Mersin-Toroslar-Buluklu-Mahallesi-Satılık-Muhtelif-Arsa-10-000-000-TL-18304829-11-04-2025_11_56_AM.png)"></div>
           <div class="title">BULUKLUDA ŞEHİR MANZARALI 900 M² ARSA</div>
@@ -476,7 +523,7 @@
         </div>
       </a>
       
-      <a href="#detail-6" class="card-link">
+      <a href="#detail-6" class="card-link" data-card-id="6">
         <div class="card">
           <div class="img" style="background-image:url(images/Wonivers-Gayri̇menkul-Mersin-Toroslar-Çopurlu-Mahallesi-Satılık-Konut-İmarlı-2-500-000-TL-18339626-11-04-2025_11_57_AM.png)"></div>
           <div class="title">Wonıvers'den Çopurlu'da 200 M2 Satılık Arsa</div>
@@ -775,6 +822,91 @@
             </div>`;
         }
       }
+      
+      // --- Gemini API Feature ---
+      const geminiButton = document.getElementById('gemini-summarize');
+      const geminiOutput = document.getElementById('gemini-output');
+      const geminiContainer = document.getElementById('gemini-summary-container');
+      
+      geminiButton.addEventListener('click', async function(e) {
+          e.preventDefault();
+          
+          geminiContainer.style.display = 'block';
+          geminiOutput.innerHTML = '<span class="loading-text">Piyasa analizi yapılıyor... Lütfen bekleyin. (Google araması kullanılıyor)</span>';
+          geminiButton.disabled = true;
+
+          try {
+              // 1. Sistem Talimatı (System Prompt)
+              const systemPrompt = `Sen Mersin, Türkiye pazarında uzmanlaşmış profesyonel bir emlak analistisin. 
+Görevin, Google arama sonuçlarına dayanarak piyasayı özetlemektir. 
+Sadece konut imarlı arsalara odaklan. 
+Cevabın kısa, profesyonel ve 2-3 paragraf uzunluğunda olmalıdır. 
+Cevabı doğrudan Türkçe olarak ver.`;
+
+              // 2. Kullanıcı Sorusu (User Query)
+              const userQuery = `Mersin'in Toroslar ve Akdeniz ilçelerindeki 'konut imarlı arsa' piyasası hakkında güncel bir analiz yap. 
+Özellikle 200 m² ile 1000 m² arasındaki arsalar için ortalama metrekare (TL/m²) fiyat aralığı nedir?`;
+
+              // 3. API Çağrısı (Grounded with Google Search)
+              const generatedText = await callGroundedGeminiApi(systemPrompt, userQuery);
+              
+              // 4. Sonucu Gösterme
+              // Metni paragraflara ayır
+              const paragraphs = generatedText.split('\n').filter(p => p.trim() !== '');
+              geminiOutput.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+
+          } catch (error) {
+              console.error('Gemini API Hatası:', error);
+              geminiOutput.innerHTML = '<span style="color: #fca5a5;">Analiz sırasında bir hata oluştu. Lütfen tekrar deneyin.</span>';
+          } finally {
+              geminiButton.disabled = false;
+          }
+      });
+
+      async function callGroundedGeminiApi(systemPrompt, userQuery) {
+          const apiKey = ""; // API anahtarı boş bırakılır
+          const apiUrl = `https://generativelace.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+          const payload = {
+              contents: [{
+                  role: "user",
+                  parts: [{ text: userQuery }]
+              }],
+              systemInstruction: {
+                  parts: [{ text: systemPrompt }]
+              },
+              // Google Aramayı etkinleştir
+              tools: [{
+                  "google_search": {}
+              }]
+          };
+
+          const response = await fetch(apiUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+              const errorData = await response.json();
+              throw new Error(`API Hatası: ${response.status} - ${errorData.error?.message || 'Bilinmeyen hata'}`);
+          }
+
+          const result = await response.json();
+          
+          if (result.candidates && result.candidates.length > 0 && result.candidates[0].content?.parts?.[0]?.text) {
+              // Grounding metadata'sını (kaynakları) da alabiliriz ama şimdilik sadece metni döndürüyoruz.
+              const text = result.candidates[0].content.parts[0].text;
+              return text;
+          } else {
+              // Geri çekilme veya hata durumu
+              if (result.promptFeedback && result.promptFeedback.blockReason) {
+                   throw new Error(`İstek engellendi: ${result.promptFeedback.blockReason}`);
+              }
+              throw new Error("Geçerli bir yanıt alınamadı.");
+          }
+      }
+
     });
   </script>
 
