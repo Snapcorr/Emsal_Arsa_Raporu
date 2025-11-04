@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Emsal Arsa Karşılaştırma Raporu — Mersin/Toroslar</title>
   
-  <!-- Vercel Analytics (ИСПРАВЛЕНО) -->
+  <!-- Vercel Analytics (Исправлено и Проверено) -->
   <script src="/_vercel/insights/script.js" defer></script>
   
   <style>
@@ -810,6 +810,7 @@ Cevabı doğrudan Türkçe olarak ver.`;
 
       async function callGroundedGeminiApi(systemPrompt, userQuery) {
           const apiKey = ""; // API anahtarı boş bırakılır
+          // ИСПРАВЛЕНО: Возвращаемся к 'gemini-1.5-flash-latest'
           const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
           const payload = {
