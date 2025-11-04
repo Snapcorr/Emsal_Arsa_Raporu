@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emsal Arsa Karşılaştırma Raporu — Mersin/Toroslar</title>
+  
+  <!-- Vercel Analytics -->
+  <script type="module">
+    import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@latest/dist/esm/index.js';
+    inject();
+  </script>
+  
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #0b1220;
+      color: #e6edf3;
+      margin: 0;
+      padding: 32px
+    }
+
+    a {
+      color: #7dd3fc;
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+    
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    .card-link:hover {
+        text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto
+    }
+
+    .h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 6px
+    }
+
+    .sub {
+      color: #94a3b8;
+      margin-bottom: 24px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px
+    }
+
+    .card {
+      background: #0f172a;
+      border: 1px solid #1f2a44;
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 0 0 1px #1f2a44;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all .2s ease-in-out;
+      height: 100%;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #38bdf8;
+    }
+    
+    .card.non-relevant {
+        background: #111827;
+        border-color: #374151;
+        opacity: 0.9;
+    }
+    .card.non-relevant:hover {
+        border-color: #6b7280;
+        transform: none;
+    }
+
+
+    .img {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      background-size: cover;
+      background-position: center;
+      background-color: #334155;
+      border: 1px solid #1f2a44;
+    }
+    
+    .card.non-relevant .img {
+        height: 100px;
+        filter: grayscale(80%);
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+    
+    .title a {
+      color: #e6edf3;
+    }
+    
+    .title a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    
+    .non-relevant .title {
+        color: #9ca3af;
+        font-size: 14px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .badge.gray {
+      background-color: #334155;
+      color: #cbd5e1
+    }
+
+    .badge.blue {
+      background-color: #1e3a8a;
+      color: #dbeafe
+    }
+    
+    .badge.red {
+        background-color: #450a0a;
+        color: #fca5a5;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      border-top: 1px solid #1f2a44;
+      padding-top: 10px;
+    }
+    
+    .card .row:last-child {
+        margin-top: auto;
+    }
+    
+    .non-relevant .row {
+        border-top-color: #374151;
+    }
+
+    .kv {
+      flex: 1
+    }
+
+    .k {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 2px
+    }
+
+    .v {
+      font-size: 15px;
+      font-weight: 600
+    }
+    
+    .modal {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(11, 18, 32, 0.9);
+        z-index: 1000;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modal-content {
+        background: #0f172a;
+        border: 1px solid #38bdf8;
+        border-radius: 14px;
+        padding: 24px;
+        width: 90%;
+        max-width: 900px;
+        margin: 40px auto;
+        position: relative;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 20px;
+        font-weight: 800;
+        color: #94a3b8;
+        text-decoration: none;
+    }
+    .modal-close:hover {
+        color: #fff;
+    }
+    
+    .modal-h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+        padding-right: 30px;
+    }
+    
+    .modal-sub {
+        font-size: 16px;
+        color: #94a3b8;
+        margin-bottom: 20px;
+    }
+    
+    .modal-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        border-bottom: 1px solid #1f2a44;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .modal-kv .k { font-size: 13px; }
+    .modal-kv .v { font-size: 16px; }
+    
+    .modal-desc .k {
+        font-size: 14px;
+        color: #94a3b8;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    .modal-desc .v {
+        font-size: 15px;
+        line-height: 1.6;
+        white-space: pre-wrap;
+    }
+    
+    .modal-footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #1f2a44;
+    }
+    
+    .btn {
+        display: inline-block;
+        background: #38bdf8;
+        color: #0b1220;
+        font-weight: 700;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background: #7dd3fc;
+        text-decoration: none;
+    }
+    
+    .btn.toggle-btn {
+        background-color: #334155;
+        color: #e6edf3;
+    }
+    .btn.toggle-btn:hover {
+        background-color: #475569;
+    }
+
+    @media print {
+        body {
+            background: #fff;
+            color: #000;
+            padding: 0;
+        }
+        
+        .container, .modal-close, .modal-footer, .toggle-container {
+            display: none;
+        }
+
+        .modal {
+            visibility: hidden;
+            opacity: 1;
+            position: static;
+            background: #fff;
+            padding: 0;
+            overflow: visible;
+        }
+        
+        .modal:target {
+            visibility: visible;
+        }
+        
+        .modal-content {
+            border: none;
+            box-shadow: none;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .modal-h1, .modal-sub, .modal-kv .k, .modal-desc .k, .modal-desc .v {
+            color: #000;
+        }
+        
+        #non-relevant-container {
+            display: none;
+        }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="h1">Emsal Arsa Karşılaştırma Raporu</div>
+    <div class="sub">6 Adet İlgili Emsal (Toroslar / Akdeniz)</div>
+    <div class="grid">
+      
+      <a href="#detail-1" class="card-link">
+        <div class="card">
+          <div class="img" style="background-image:url(images/KALE-DEN-CAMİLİ-DE-2-KAT-KONUT-İMARLI-450m2-ARSA-Satılık-Arsa-İlanları-sahibinden-com-da-1200202872-11-04-2025_11_52_AM.png)"></div>
+          <div class="title">KALE'DEN CAMİLİ'DE KONUT İMARLI 450m2 ARSA</div>
+          <div class="badges">
+            <div class="badge gray">Mersin / Akdeniz / Camili</div>
+            <div class="badge blue">Konut İmarlı</div>
+          </div>
+          <div class="row">
+            <div class="kv">
+              <div class="k">Fiyat</div>
+              <div class="v">3.600.000 TL</div>
+            </div>
+            <div class="kv">
+              <div class="k">Alan</div>
+              <div class="v">450 m²</div>
+            </div>
+            <div class="kv">
+              <div class="k">m² Fiyatı</div>
+              <div class="v">8.000 TL</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#detail-2" class="card-link">
+        <div class="card">
+          <div class="img" style="background-image:url(images/TEKİNLER-EMLAK-TAN-KURDALİ-MAH-SATILIK-KONUT-İMARLI-ARSA-Satılık-Arsa-İlanları-sahibinden-com-da-1273025677-11-04-2025_11_53_AM.png)"></div>
+          <div class="title">TEKİNLER EMLAK'TAN KURDALİ MAH SATILIK KONUT İMARLI ARSA</div>
+          <div class="badges">
+            <div class="badge gray">Mersin / Toroslar / Kurdali</div>
+            <div class="badge blue">Konut İmarlı</div>
+          </div>
+          <div class="row">
+            <div class="kv">
+              <div class="k">Fiyat</div>
+              <div class="v">1.700.000 TL</div>
+            </div>
+            <div class="kv">
+              <div class="k">Alan</div>
+              <div class="v">200 m²</div>
+            </div>
+            <div class="kv">
+              <div class="k">m² Fiyatı</div>
+              <div class="v">8.500 TL</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#detail-3" class="card-link">
+        <div class="card">
+          <div class="img" style="background-image:url(images/YUSUF-KILIÇTA-377M2-1-50EMSAL-ZEMİN-3-KAT-ARSA-Satılık-Arsa-İlanları-sahibinden-com-da-1258635475-11-04-2025_11_54_AM.png)"></div>
+          <div class="title">YUSUF KILIÇTA 377M2 1.50EMSAL ARSA</div>
+          <div class="badges">
+            <div class="badge gray">Mersin / Toroslar / Yusuf Kılıç Mh.</div>
+            <div class="badge blue">Konut İmarlı (1.50 Emsal)</div>
+          </div>
+          <div class="row">
+            <div class="kv">
+              <div class="k">Fiyat</div>
+              <div class="v">4.000.000 TL</div>
+            </div>
+            <div class="kv">
+              <div class="k">Alan</div>
+              <div class="v">377 m²</div>
+            </div>
+            <div class="kv">
+              <div class="k">m² Fiyatı</div>
+              <div class="v">10.610 TL</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#detail-4" class="card-link">
+        <div class="card">
+          <div class="img" style="background-image:url(images/Ars-Yapi-Gayrimenkul-Mersin-Toroslar-Alsancak-Mahallesi-Satılık-Bağ-Bahçe-2-600-000-TL-17890693-11-04-2025_11_55_AM.png)"></div>
+          <div class="title">Mersin Alsancak Mahallesi'nde Satılık 240 Metrekare Arsa</div>
+          <div class="badges">
+            <div class="badge gray">Mersin / Toroslar / Alsancak Mahallesi</div>
+            <div class="badge blue">Bağ & Bahçe</div>
+          </div>
+          <div class="row">
+            <div class="kv">
+              <div class="k">Fiyat</div>
+              <div class="v">2.600.000 TL</div>
+            </div>
+            <div class="kv">
+              <div class="k">Alan</div>
+              <div class="v">240 m²</div>
+            </div>
+            <div class="kv">
+              <div class="k">m² Fiyatı</div>
+              <div class="v">10.833 TL</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#detail-5" class="card-link">
+        <div class="card">
+          <div class="img" style="background-image:url(images/Dumanoğlu-Emlak-İnşaat-Otomoti̇v-Mersin-Toroslar-Buluklu-Mahallesi-Satılık-Muhtelif-Arsa-10-000-000-TL-18304829-11-04-2025_11_56_AM.png)"></div>
+          <div class="title">BULUKLUDA ŞEHİR MANZARALI 900 M² ARSA</div>
+          <div class="badges">
+            <div class="badge gray">Mersin / Toroslar / Buluklu</div>
+            <div class="badge blue">İmarlı (Konut)</div>
+          </div>
+          <div class="row">
+            <div class="kv">
+              <div class="k">Fiyat</div>
+              <div class="v">10.000.000 TL</div>
+            </div>
+            <div class="kv">
+              <div class="k">Alan</div>
+              <div class="v">900 m²</div>
+            </div>
+            <div class="kv">
+              <div class="k">m² Fiyatı</div>
+              <div class="v">11.111 TL</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#detail-6" class="card-link">
+        <div class="card">
+          <div class="img" style="background-image:url(images/Wonivers-Gayri̇menkul-Mersin-Toroslar-Çopurlu-Mahallesi-Satılık-Konut-İmarlı-2-500-000-TL-18339626-11-04-2025_11_57_AM.png)"></div>
+          <div class="title">Wonıvers'den Çopurlu'da 200 M2 Satılık Arsa</div>
+          <div class="badges">
+            <div class="badge gray">Mersin / Toroslar / Çopurlu</div>
+            <div class="badge blue">Konut İmarlı</div>
+          </div>
+          <div class="row">
+            <div class="kv">
+              <div class="k">Fiyat</div>
+              <div class="v">2.500.000 TL</div>
+            </div>
+            <div class="kv">
+              <div class="k">Alan</div>
+              <div class="v">200 m²</div>
+            </div>
+            <div class="kv">
+              <div class="k">m² Fiyatı</div>
+              <div class="v">12.500 TL</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  
+  
+  <div class="container toggle-container" style="margin-top: 30px; text-align: center;">
+    <a href="#" id="toggle-other-listings" class="btn toggle-btn">Diğer Teklifleri / Analiz Dışı Kalanları Göster (Aç)</a>
+  </div>
+  
+  <div class="container" id="non-relevant-container" style="display: none; margin-top: 20px;">
+    <div class="h1">Analiz Dışı Kalan İlanlar</div>
+    <div class="sub">Bu ilanlar, fiyat (çok yüksek/düşük), imar durumu (ticari, sağlık), veri eksikliği (fiyat/m² yok) veya ana listeden çıkarılma nedeniyle birincil analizden çıkarılmıştır.</div>
+    
+    <div id="non-relevant-grid" class="grid">
+      <div class="card non-relevant">
+        <div class="title" style="color: #fca5a5;">Yükleniyor...</div>
+        <div class="row">
+          <div class="kv">
+            <div class="v" style="font-size: 14px; font-weight: normal; line-height: 1.5;">
+              <code>data/non_relevant_data.json</code> yükleniyor...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- ДЕТАЛИ 1 -->
+  <div class="modal" id="detail-1">
+    <div class="modal-content">
+      <a href="#" class="modal-close" title="Kapat">×</a>
+      <div class="modal-h1">KALE'DEN CAMİLİ'DE KONUT İMARLI 450m2 ARSA</div>
+      <div class="modal-sub">Mersin / Akdeniz / Camili</div>
+      
+      <div class="modal-grid">
+        <div class="modal-kv"><div class="k">Fiyat</div><div class="v">3.600.000 TL</div></div>
+        <div class="modal-kv"><div class="k">Alan</div><div class="v">450 m²</div></div>
+        <div class="modal-kv"><div class="k">m² Fiyatı</div><div class="v">8.000 TL</div></div>
+        <div class="modal-kv"><div class="k">İmar Durumu</div><div class="v">Konut İmarlı (2 kat)</div></div>
+        <div class="modal-kv"><div class="k">İlan Tarihi</div><div class="v">Belirtilmemiş</div></div>
+        <div class="modal-kv"><div class="k">Kaynak</div><div class="v">Sahibinden / Kale Emlak</div></div>
+      </div>
+      
+      <div class="modal-desc">
+        <div class="k">Açıklama</div>
+        <div class="v">KALE'DEN CAMİLİ'DE 2 KAT KONUT İMARLI 450m2 ARSA (Ek Bilgi: Merkezi konum)</div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-kale-den-camili-de-2-kat-konut-imarli-450m2-arsa-1200202872/detay" target="_blank" class="btn">Orijinal İlanı Görüntüle</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ДЕТАЛИ 2 -->
+  <div class="modal" id="detail-2">
+    <div class="modal-content">
+      <a href="#" class="modal-close" title="Kapat">×</a>
+      <div class="modal-h1">TEKİNLER EMLAK'TAN KURDALİ MAH SATILIK KONUT İMARLI ARSA</div>
+      <div class="modal-sub">Mersin / Toroslar / Kurdali</div>
+      
+      <div class="modal-grid">
+        <div class="modal-kv"><div class="k">Fiyat</div><div class="v">1.700.000 TL</div></div>
+        <div class="modal-kv"><div class="k">Alan</div><div class="v">200 m²</div></div>
+        <div class="modal-kv"><div class="k">m² Fiyatı</div><div class="v">8.500 TL</div></div>
+        <div class="modal-kv"><div class="k">İmar Durumu</div><div class="v">Konut İmarlı</div></div>
+        <div class="modal-kv"><div class="k">İlan Tarihi</div><div class="v">Belirtilmemiş</div></div>
+        <div class="modal-kv"><div class="k">Kaynak</div><div class="v">Sahibinden / Tekinler Emlak</div></div>
+      </div>
+      
+      <div class="modal-desc">
+        <div class="k">Açıklama</div>
+        <div class="v">TEKİNLER EMLAK'TAN KURDALİ MAH SATILIK KONUT İMARLI ARSA (Ek Bilgi: Anayola yakın)</div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-tekinler-emlak-tan-kurdali-mah-satilik-konut-imarli-arsa-1273025677/detay" target="_blank" class="btn">Orijinal İlanı Görüntüle</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ДЕТАЛИ 3 -->
+  <div class="modal" id="detail-3">
+    <div class="modal-content">
+      <a href="#" class="modal-close" title="Kapat">×</a>
+      <div class="modal-h1">YUSUF KILIÇTA 377M2 1.50EMSAL ARSA</div>
+      <div class="modal-sub">Mersin / Toroslar / Yusuf Kılıç Mh.</div>
+      
+      <div class="modal-grid">
+        <div class="modal-kv"><div class="k">Fiyat</div><div class="v">4.000.000 TL</div></div>
+        <div class="modal-kv"><div class="k">Alan</div><div class="v">377 m²</div></div>
+        <div class="modal-kv"><div class="k">m² Fiyatı</div><div class="v">10.610 TL</div></div>
+        <div class="modal-kv"><div class="k">İmar Durumu</div><div class="v">Konut İmarlı (1.50 Emsal)</div></div>
+        <div class="modal-kv"><div class="k">İlan Tarihi</div><div class="v">15 Ekim 2025</div></div>
+        <div class="modal-kv"><div class="k">Kaynak</div><div class="v">Sahibinden / Emlak Ofisi</div></div>
+      </div>
+      
+      <div class="modal-desc">
+        <div class="k">Açıklama</div>
+        <div class="v">Arsamız imar uygulama planı içerisinde olup 1.50emsal zemin+3 kattır…</div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-yusuf-kilicta-377m2-1.50emsal-zemin-plus3-kat-arsa-1258635475/detay" target="_blank" class="btn">Orijinal İlanı Görüntüle</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ДЕТАЛИ 4 -->
+  <div class="modal" id="detail-4">
+    <div class="modal-content">
+      <a href="#" class="modal-close" title="Kapat">×</a>
+      <div class="modal-h1">Mersin Alsancak Mahallesi'nde Satılık 240 Metrekare Arsa</div>
+      <div class="modal-sub">Mersin / Toroslar / Alsancak Mahallesi</div>
+      
+      <div class="modal-grid">
+        <div class="modal-kv"><div class="k">Fiyat</div><div class="v">2.600.000 TL</div></div>
+        <div class="modal-kv"><div class="k">Alan</div><div class="v">240 m²</div></div>
+        <div class="modal-kv"><div class="k">m² Fiyatı</div><div class="v">10.833 TL</div></div>
+        <div class="modal-kv"><div class="k">İmar Durumu</div><div class="v">Bağ & Bahçe</div></div>
+        <div class="modal-kv"><div class="k">İlan Tarihi</div><div class="v">16 Ağustos 2025</div></div>
+        <div class="modal-kv"><div class="k">Kaynak</div><div class="v">Emlakjet / Ars Yapi Gayrimenkul</div></div>
+      </div>
+      
+      <div class="modal-desc">
+        <div class="k">Açıklama</div>
+        <div class="v">Mersin Alsancak Mahallesi sanat lisesi 2 parsel dolmuş yolu üzeri içerisinde 2 adet 1+1 müstakil ev var 240 metrekare arsa. Mersin, Toroslar ilçesindeki bu değerli müstakil gayrimenkul, 240 m² alanda, 2 adet 1+1 müstakil ev içermektedir. Dolmuş yoluna yakın konumu ulaşımı kolaylaştırır, sakin yaşam sunar ve çeşitli kullanım alanları sağlar.</div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.emlakjet.com/ilan/mersin-alsancak-mahallesi-nde-satilik-240-metrekare-arsa-17890693" target="_blank" class="btn">Orijinal İlanı Görüntüle</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ДЕТАЛИ 5 -->
+  <div class="modal" id="detail-5">
+    <div class="modal-content">
+      <a href="#" class="modal-close" title="Kapat">×</a>
+      <div class="modal-h1">BULUKLUDA ŞEHİR MANZARALI 900 M² ARSA</div>
+      <div class="modal-sub">Mersin / Toroslar / Buluklu</div>
+      
+      <div class="modal-grid">
+        <div class="modal-kv"><div class="k">Fiyat</div><div class="v">10.000.000 TL</div></div>
+        <div class="modal-kv"><div class="k">Alan</div><div class="v">900 m²</div></div>
+        <div class="modal-kv"><div class="k">m² Fiyatı</div><div class="v">11.111 TL</div></div>
+        <div class="modal-kv"><div class="k">İmar Durumu</div><div class="v">İmarlı (Konut)</div></div>
+        <div class="modal-kv"><div class="k">İlan Tarihi</div><div class="v">Belirtilmemiş</div></div>
+        <div class="modal-kv"><div class="k">Kaynak</div><div class="v">Emlakjet / Dumanoğlu Emlak</div></div>
+      </div>
+      
+      <div class="modal-desc">
+        <div class="k">Açıklama</div>
+        <div class="v">BULUKLUDA ŞEHİR MANZARALI 900 M² ARSA (Ek Bilgi: Full Mersin manzaralı)</div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.emlakjet.com/satilik-arsa/mersin-toroslar-buluklu-mahallesi" target="_blank" class="btn">Orijinal İlanı Görüntüle</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ДЕТАЛИ 6 -->
+  <div class="modal" id="detail-6">
+    <div class="modal-content">
+      <a href="#" class="modal-close" title="Kapat">×</a>
+      <div class="modal-h1">Wonıvers'den Çopurlu'da 200 M2 Satılık Arsa</div>
+      <div class="modal-sub">Mersin / Toroslar / Çopurlu</div>
+      
+      <div class="modal-grid">
+        <div class="modal-kv"><div class="k">Fiyat</div><div class="v">2.500.000 TL</div></div>
+        <div class="modal-kv"><div class="k">Alan</div><div class="v">200 m²</div></div>
+        <div class="modal-kv"><div class="k">m² Fiyatı</div><div class="v">12.500 TL</div></div>
+        <div class="modal-kv"><div class="k">İmar Durumu</div><div class="v">Konut İmarlı</div></div>
+        <div class="modal-kv"><div class="k">İlan Tarihi</div><div class="v">Belirtilmemiş</div></div>
+        <div class="modal-kv"><div class="k">Kaynak</div><div class="v">Emlakjet / Wonıvers</div></div>
+      </div>
+      
+      <div class="modal-desc">
+        <div class="k">Açıklama</div>
+        <div class="v">Wonıvers'den Çopurlu'da 200 M2 Satılık Arsa (Ek Bilgi: Belirtilmemiş)</div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.emlakjet.com/ilan/wonivers-den-copurlu-da-200-m2-satilik-arsa-18339626" target="_blank" class="btn">Orijinal İlanı Görüntüle</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.getElementById('toggle-other-listings');
+      const container = document.getElementById('non-relevant-container');
+      const grid = document.getElementById('non-relevant-grid');
+      let dataLoaded = false;
+
+      toggleButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const isHidden = container.style.display === 'none';
+        
+        if (isHidden) {
+          container.style.display = 'block';
+          toggleButton.textContent = 'Diğer Teklifleri Gizle (Kapat)';
+          
+          if (!dataLoaded) {
+            loadNonRelevantData();
+          }
+        } else {
+          container.style.display = 'none';
+          toggleButton.textContent = 'Diğer Teklifleri / Analiz Dışı Kalanları Göster (Aç)';
+        }
+      });
+
+      async function loadNonRelevantData() {
+        try {
+          const response = await fetch('data/non_relevant_data.json');
+          if (!response.ok) {
+            throw new Error(`HTTP hatası! Durum: ${response.status}`);
+          }
+          const data = await response.json();
+          
+          grid.innerHTML = ''; 
+          
+          data.listings.forEach((plot, index) => {
+            const cardHTML = `
+              <div class="card non-relevant">
+                
+                <div class="title">
+                  <a href="${plot.url || '#'}" target="_blank">
+                    ${plot.data.description.substring(0, 70)}...
+                  </a>
+                </div>
+                <div class="badges">
+                  <div class="badge gray">${plot.data.location || 'Konum Yok'}</div>
+                  <div class="badge red">${plot.dis_nedeni || 'Analiz Dışı'}</div>
+                </div>
+                <div class="row">
+                  <div class="kv">
+                    <div class="k">Fiyat</div>
+                    <div class="v">${plot.data.price || 'N/A'}</div>
+                  </div>
+                  <div class="kv">
+                    <div class="k">Alan</div>
+                    <div class="v">${plot.data.area_m2 ? plot.data.area_m2 + ' m²' : 'N/A'}</div>
+                  </div>
+                  <div class="kv">
+                    <div class="k">m² Fiyatı</div>
+                    <div class="v">${plot.data.price_per_m2 ? plot.data.price_per_m2 + ' TL' : 'N/A'}</div>
+                  </div>
+                </div>
+              </div>
+            `;
+            grid.insertAdjacentHTML('beforeend', cardHTML);
+          });
+          
+          dataLoaded = true;
+          
+        } catch (error) {
+          console.error('Veriler yüklenirken hata oluştu:', error);
+          grid.innerHTML = `
+            <div class="card non-relevant">
+              <div class="title" style="color: #fca5a5;">Veri Yüklenemedi</div>
+              <div class="row">
+                <div class="kv">
+                  <div class="v" style="font-size: 14px; font-weight: normal; line-height: 1.5;">
+                    <code>data/non_relevant_data.json</code> dosyası yüklenirken bir hata oluştu. Lütfen dosya adının ve konumunun doğru olduğundan emin olun.
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
+
