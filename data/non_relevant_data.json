@@ -1,0 +1,325 @@
+{
+  "listings": [
+    {
+      "internal_id": "ilan_01",
+      "listing_id": "1279775376",
+      "url": "https://www.sahibinden.com/ilan/emlak-arsa-satilik-toroslar-zeki-ayan-mahallesinde-satilik-saglik-tesis-alani-1279775376/detay",
+      "dis_nedeni": "İmar Durumu: Sağlık (Konut Dışı)",
+      "data": {
+        "price": "25.000.000 TL",
+        "location": "Mersin / Toroslar / Zeki Ayan Mah.",
+        "listing_date": "29 Ekim 2025",
+        "area_m2": 2792,
+        "price_per_m2": "8.954 TL",
+        "zoning_status": "Sağlık",
+        "source": "Emlak Ofisinden",
+        "description": "Detaylı bilgi için lütfen arayınız"
+      }
+    },
+    {
+      "internal_id": "ilan_02",
+      "listing_id": "1256391933",
+      "url": "https://www.sahibinden.com/ilan/emlak-arsa-satilik-oskar-dan-alsancak-mah-kosebasi-186m2-satilik-kupon-arsa-1256391933/detay",
+      "dis_nedeni": "Revize Edildi (Ana Listede Değil)",
+      "data": {
+        "price": "1.750.000 TL",
+        "location": "Mersin / Toroslar / Alsancak Mah.",
+        "listing_date": "03 Kasım 2025",
+        "area_m2": 186,
+        "price_per_m2": "9.409 TL",
+        "zoning_status": "Konut",
+        "source": "Emlak Ofisinden",
+        "description": "OSKAR'DAN ALSANCAK MAH.DE 186 M2 ARSA KÖŞEBAŞI 2 KATA İMARLI MÜSTAKİL TAPULU"
+      }
+    },
+    {
+      "internal_id": "ilan_03",
+      "listing_id": "1216692747",
+      "url": "https://www.sahibinden.com/ilan/emlak-arsa-satilik-sahibinden-satilik-arsa-5-kata-imar-izni-vardir-1216692747/detay",
+      "dis_nedeni": "Fiyat Yüksek (13.810 TL/m²)",
+      "data": {
+        "price": "2.900.000 TL",
+        "location": "Mersin / Toroslar / Alsancak Mah.",
+        "listing_date": "25 Ekim 2025",
+        "area_m2": 210,
+        "price_per_m2": "13.810 TL",
+        "zoning_status": "Konut",
+        "source": "Sahibinden",
+        "description": "Bilgi için arayınız.5 kata imar hakkı vardır.resimler yakında yüklenecektir."
+      }
+    },
+    {
+      "internal_id": "ilan_04",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://emlak.mitula.com.tr/emlak/daire-toroslar",
+      "dis_nedeni": "Arsa + Ev (Fiyat Hatalı)",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Yalınayak Mah.",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 200,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı (5 kata)",
+        "source": "Mitula Emlak",
+        "description": "Mersin Toroslar Yalınayak Mahallesinde Acil Satlık Müstakil Daire 200 M arsamız 5 kata imarlıdır. Alt kat boş, üst kat 2+1. Yalınayak Postanesi yakınında."
+      }
+    },
+    {
+      "internal_id": "ilan_05",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://emlak.mitula.com.tr/emlak/daire-toroslar",
+      "dis_nedeni": "Arsa + Ev (Fiyat Hatalı)",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Belenoluk Yaylası",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 223,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı",
+        "source": "Mitula Emlak",
+        "description": "TOROSLAR’DA BELENOLUK YAYLASINDA KEPİRLİ KUZEYİ 2 KATLI İÇİ YAPILI 3 ODA 1 SALON 223 M2 ARSA ÜZERİNDE."
+      }
+    },
+    {
+      "internal_id": "ilan_06",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.emlakjet.com/satilik-konut-imarli-arsa/mersin-toroslar/",
+      "dis_nedeni": "Fiyat Düşük (3.978 TL/m²)",
+      "data": {
+        "price": "2.200.000 TL",
+        "location": "Mersin / Toroslar / Buluklu Mah.",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 553,
+        "price_per_m2": "3.978 TL",
+        "zoning_status": "Konut İmarlı",
+        "source": "Emlakjet",
+        "description": "MERSİN GÖZNE YOLUNDA SATILIK İMARLI RUHSATLI VİLLALIK ARSA."
+      }
+    },
+    {
+      "internal_id": "ilan_07",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.emlakjet.com/satilik-konut-imarli-arsa/mersin-toroslar/",
+      "dis_nedeni": "Fiyat Çok Düşük (651 TL/m²)",
+      "data": {
+        "price": "360.000 TL",
+        "location": "Mersin / Toroslar / Gözne Mah.",
+        "listing_date": "23 Kasım 2024 (Tahmini)",
+        "area_m2": 553,
+        "price_per_m2": "651 TL",
+        "zoning_status": "Konut İmarlı",
+        "source": "Emlakjet",
+        "description": "U.T'DEN ŞEHİR HASTANESİ ARKASI KONUT İMARLI SATILIK ARSA."
+      }
+    },
+    {
+      "internal_id": "ilan_08",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://emlak.mitula.com.tr/emlak/daire-toroslar",
+      "dis_nedeni": "Arsa + Ev (Fiyat Hatalı)",
+      "data": {
+        "price": "1.750.000 TL",
+        "location": "Mersin / Toroslar / Yüksekoluk",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 403,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı",
+        "source": "Mitula Emlak",
+        "description": "SATILIK ÖZEL MÜSTAKİL KONUT – HOBİ BAHÇELİ VE EKSTRA DAİRELİ. Arsa Alanı: 403 m². Bina Tipi: 2 Katlı Müstakil."
+      }
+    },
+    {
+      "internal_id": "ilan_09",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.emlakjet.com/satilik-arsa/mersin-toroslar-kavaklipinar-mahallesi",
+      "dis_nedeni": "Fiyat Çok Düşük (730 TL/m²)",
+      "data": {
+        "price": "4.500.000 TL",
+        "location": "Mersin / Toroslar / Kavaklıpınar",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 6165,
+        "price_per_m2": "730 TL",
+        "zoning_status": "Köy İçi İmarlı",
+        "source": "Emlakjet",
+        "description": "TOROSLAR KAVAKLIPINARDA 6165 M2 KÖY İÇİ İMARLI ARSA. YAYLALIK 6 EV YERI."
+      }
+    },
+    {
+      "internal_id": "ilan_10",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.emlakjet.com/satilik-arsa/mersin-toroslar-buluklu-mahallesi",
+      "dis_nedeni": "Fiyat Yüksek (13.111 TL/m²)",
+      "data": {
+        "price": "5.900.000 TL",
+        "location": "Mersin / Toroslar / Buluklu",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 450,
+        "price_per_m2": "13.111 TL",
+        "zoning_status": "İmarlı",
+        "source": "Emlakjet",
+        "description": "BULUKLUDA ŞEHİR MANZARALI 450 M² ARSA."
+      }
+    },
+    {
+      "internal_id": "ilan_11",
+      "listing_id": "18191353",
+      "url": "https://www.emlakjet.com/ilan/acar-group-insaat-tan-sarnicta-750-m2-konut-imarli-satilik-arsa-18191353",
+      "dis_nedeni": "Fiyat Düşük (5.067 TL/m²)",
+      "data": {
+        "price": "3.800.000 TL",
+        "location": "Mersin / Toroslar / Darısekisi",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 750,
+        "price_per_m2": "5.067 TL",
+        "zoning_status": "Konut İmarlı",
+        "source": "Emlakjet",
+        "description": "ACAR GROUP İNŞAAT'TAN SARNIÇTA 750 M2 KONUT İMARLI SATILIK ARSA."
+      }
+    },
+    {
+      "internal_id": "ilan_12",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.remax.com.tr/arsa-arazi/konut/satilik/mersin/toroslar",
+      "dis_nedeni": "Fiyat Bilgisi Yok",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Gözne Menekşelik",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 675,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Villalık (Konut imarlı)",
+        "source": "Remax",
+        "description": "REMAX TROPİKTEN GÖZNE MENEKŞELİKTE 675 M2 VİLLALIK ARSA."
+      }
+    },
+    {
+      "internal_id": "ilan_13",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.remax.com.tr/arsa-arazi/konut/satilik/mersin/toroslar",
+      "dis_nedeni": "Fiyat Bilgisi Yok",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Kaşlı Mah.",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 600,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı",
+        "source": "Remax",
+        "description": "REMAX TOROS'TAN KAŞLI'DA ŞEHİR VE DENİZ MANZARALI 600 M2 SATILIK ARSA."
+      }
+    },
+    {
+      "internal_id": "ilan_14",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.remax.com.tr/arsa-arazi/konut/satilik/mersin/toroslar",
+      "dis_nedeni": "Fiyat Bilgisi Yok",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Yeniköy Mah.",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 478,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı (Meyve Bahçesi)",
+        "source": "Remax",
+        "description": "REMAX TOROS'TAN YENİKÖY'DE 478 M2 MEYVE BAHÇESİ."
+      }
+    },
+    {
+      "internal_id": "ilan_15",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://daire.trovit.com.tr/daire-toroslar",
+      "dis_nedeni": "Fiyat Bilgisi Yok",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Yüksekoluk",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 3871,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı",
+        "source": "Trovit",
+        "description": "NAM GAYRİMENKUL'DEN MERSİN TOROSLAR YÜKSEKOLUK MAHALLESİNDE, TAŞINMAZIMIZ YÜKSEKOLUK KLAVUR (KÖY İÇİ) MEVKİİNDE, ARSAMIZ TAPULU ALAN 3871 M2."
+      }
+    },
+    {
+      "internal_id": "ilan_16",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://mersinemlakci.com/?lang=en&page=main-page",
+      "dis_nedeni": "Fiyat Bilgisi Yok",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Belirtilmemiş",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 1200,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "Konut imarlı",
+        "source": "Mersinemlakci",
+        "description": "1.200m², konut imarlı, ana yol cepheli, elektrik-su mevcut."
+      }
+    },
+    {
+      "internal_id": "ilan_17",
+      "listing_id": "1274586120",
+      "url": "https://www.sahibinden.com/ilan/emlak-arsa-satilik-berk-emlak-tan-ayvagedigi-yaylasimda-satilik-660m2-imarli-arsa-1274586120/detay",
+      "dis_nedeni": "Fiyat Bilgisi Yok",
+      "data": {
+        "price": "Belirtilmemiş",
+        "location": "Mersin / Toroslar / Ayvagediği",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 660,
+        "price_per_m2": "Belirtilmemiş",
+        "zoning_status": "İmarlı (Konut)",
+        "source": "Emlak Ofisinden",
+        "description": "BERK EMLAK'TAN AYVAGEDİĞİ YAYLASIMDA SATILIK 660m² İMARLI ARSA"
+      }
+    },
+    {
+      "internal_id": "ilan_18",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.hepsiemlak.com/simetriden-yenisehir-ciftlikte-392-m2-mustakil-ve-villaya-uygun-satilik-arsa-detin-128059-403",
+      "dis_nedeni": "İlgisiz Konum (Yenişehir) / Fiyat Yüksek (19.770 TL/m²)",
+      "data": {
+        "price": "7.750.000 TL",
+        "location": "Mersin / Yenişehir / Batıkent",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 392,
+        "price_per_m2": "19.770 TL",
+        "zoning_status": "İmarlı Konut",
+        "source": "Hepsiemlak",
+        "description": "Simetri'den Yenişehir Çiftlik'te 392 M2 Müstakil Ve Villaya Uygun Satılık Arsa"
+      }
+    },
+    {
+      "internal_id": "ilan_19",
+      "listing_id": "Belirtilmemiş",
+      "url": "https://www.hepsiemlak.com/mersin-yenisehir-uzunkas-satilik/arazi/detay?id=some-id",
+      "dis_nedeni": "İlgisiz Konum (Yenişehir) / Arsa + Ev / Fiyat Düşük",
+      "data": {
+        "price": "2.250.000 TL",
+        "location": "Mersin / Yenişehir / Uzunkaş",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 800,
+        "price_per_m2": "2.813 TL",
+        "zoning_status": "İmarlı Konut",
+        "source": "Hepsiemlak",
+        "description": "Mersin Yenişehir Uzunkaş Ta İçinde Yazlık Ev Bulunan 800m2 Satılık Arazi"
+      }
+    },
+    {
+      "internal_id": "ilan_20",
+      "listing_id": "1271344146",
+      "url": "https://www.sahibinden.com/ilan/emlak-arsa-satilik-sahibinden-adliye-civari-ticari-konut-imarli-satilik-arsa-1271344146/detay",
+      "dis_nedeni": "Karma İmar (Ticari+Konut) / Fiyat Yüksek (15.975 TL/m²)",
+      "data": {
+        "price": "6.390.000 TL",
+        "location": "Mersin / Akdeniz / Belirtilmemiş",
+        "listing_date": "Belirtilmemiş",
+        "area_m2": 400,
+        "price_per_m2": "15.975 TL",
+        "zoning_status": "Ticari + Konut İmarlı",
+        "source": "Sahibinden",
+        "description": "SAHİBİNDEN ADLİYE CİVARI TİCARİ+KONUT İMARLI SATILIK ARSA"
+      }
+    }
+  ]
+}
+
